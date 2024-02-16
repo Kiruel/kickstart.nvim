@@ -90,11 +90,6 @@ return {
       vim.cmd('te fvm flutter packages pub run build_runner build --delete-conflicting-outputs')
       vim.cmd('2sleep | normal G')
     end)
-    vim.keymap.set('n', '<leader>bt', function()
-      vim.cmd('20new')
-      vim.cmd('te sh scripts/create_clean_lcov_and_generate_html.sh')
-      vim.cmd('2sleep | normal G')
-    end)
     -- '<Cmd>20new | te fvm flutter pub get && fvm flutter packages pub run build_runner build --delete-conflicting-outputs<CR> | $')
   end
 };
